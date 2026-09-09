@@ -1,0 +1,34 @@
+{
+  "name": "prompt-architect-code-agents",
+  "version": "1.0.0",
+  "description": "Cross-tool (Claude Code, Codex CLI, OpenCode) SKILL that generates system prompts shaped for hand-coded/function-calling AI agents, adapted from an n8n-oriented prompt-architect persona.",
+  "private": true,
+  "license": "MIT",
+  "bin": {
+    "prompt-architect-install": "./scripts/install.js"
+  },
+  "scripts": {
+    "postinstall": "node ./scripts/install.js",
+    "preuninstall": "node ./scripts/uninstall.js"
+  },
+  "files": [
+    "scripts",
+    "skill"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "claude-code",
+    "codex-cli",
+    "opencode",
+    "skill",
+    "prompt-engineering",
+    "ai-agent",
+    "system-prompt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/railsongama24-droid/System_prompt.git"
+  }
+}
