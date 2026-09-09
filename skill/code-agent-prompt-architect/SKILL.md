@@ -70,17 +70,6 @@ Sempre que solicitado a criar um prompt, siga este protocolo:
    `()`, `+`, `**`, `¨`, `@`, `&`, ...), parametrizadas pelo canal de saída
    (WhatsApp hoje; outros canais amanhã) e pelo limite de caracteres da
    resposta.
-   **ESCREVA A RESTRIÇÃO NA FORMA POSITIVA.** Uma lista de "não use" é a forma
-   mais fraca de instruir um modelo, e vaza justamente nos caracteres que são
-   pontuação nativa dele, como o travessão. Em vez disso, diga o que usar
-   ("ligue as ideias com vírgula, a vírgula é o único conector"), liste os
-   sinais permitidos em vez dos proibidos, dê uma tabela de substituição
-   ("travessão vira vírgula") e feche com um par de exemplos errado/certo do
-   mesmo conteúdo, apontando o que mudou. Só depois disso vale repetir a
-   proibição na checagem final, e ali peça releitura caractere por caractere,
-   não uma conferência genérica.
-   Verifique se o runtime tem sanitização de saída: o que o código não remove,
-   só o prompt segura, e isso muda o quanto a regra precisa ser reforçada.
 
 ## Estrutura obrigatória do prompt gerado
 
