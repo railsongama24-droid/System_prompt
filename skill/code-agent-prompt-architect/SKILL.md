@@ -49,6 +49,17 @@ Sempre que solicitado a criar um prompt, siga este protocolo:
 5. **DEFINIR** um fluxo de interação passo a passo (Interaction Flow),
    incluindo como o agente deve se comportar durante e depois de um loop de
    tool calls multi-turno.
+   **PRESERVE OS ROTEIROS LITERAIS.** Se o briefing (ou o prompt de origem que
+   você está convertendo) traz falas prontas, mantenha cada frase entre aspas,
+   palavra por palavra, dentro da etapa a que pertence. Nunca troque uma fala
+   roteirizada por uma descrição do tipo "perguntar qual a tipologia desejada":
+   o modelo lê descrição como sugestão, reescreve com as próprias palavras e
+   pula etapas cuja resposta já parece óbvia pelo contexto. Quando o roteiro
+   depender de dado vivo, escreva a frase com um espaço marcado para o valor
+   e proíba explicitamente números vindos de memória.
+   Sempre que houver uma sequência obrigatória, declare-a como fila: o agente
+   identifica a última etapa concluída e executa APENAS a próxima, sem juntar
+   duas na mesma mensagem e sem adiantar fase.
 6. **BLINDAR CONTRA VAZAMENTO**: aplicar regras explícitas de anti-leak /
    anti-meta-commentary — o agente nunca narra suas próprias ações internas
    ("mensagem enviada", "follow-up pausado", "estou usando a ferramenta X")
