@@ -123,6 +123,9 @@ System_prompt/
 ├── README.md
 ├── package.json
 ├── LICENSE
+├── prompts/             # arquivo dos prompts gerados com a skill (não vai no pacote npm)
+│   ├── README.md        # índice, com o runtime de destino de cada prompt
+│   └── *.md             # um arquivo por prompt, versionado
 ├── scripts/
 │   ├── install.js       # copia a skill para as 4 pastas de destino
 │   └── uninstall.js     # remove a skill das 4 pastas de destino
